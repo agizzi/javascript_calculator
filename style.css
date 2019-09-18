@@ -1,0 +1,120 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* COME BACK TO THIS */
+
+.container {
+	margin: 10px auto;
+	font-family: 'century gothic', sans-serif;
+	background-image: url(http://s7.favim.com/orig/151209/background-clouds-pastel-rainbow-Favim.com-3736687.jpg);
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	max-width: 400px;
+	height: 500px;
+}
+
+.square {
+	background-color: #d4d3d3;
+	font-family: 'century gothic', sans-serif;
+	font-size: 2rem;
+	border: none;
+	border-radius: 50%;
+	height: 100px;
+	width: 100px;
+	shape-margin: 0;
+	color: black;
+}
+
+.operator {
+	background-color: white;
+}
+
+.square:hover {
+	color: white;
+}
+
+.c:hover {
+	background-color: #e37c7c;
+}
+
+.seven:hover {
+	background-color: #e39f76;
+}
+
+.eight:hover {
+	background-color: #e3c17c;
+}
+
+.nine:hover {
+	background-color: #e3e07c;
+}
+
+.division:hover {
+	background-color: #c1e37c;
+}
+
+.four:hover {
+	background-color: #98e37c;
+}
+
+.five:hover {
+	background-color: #7ce387;
+}
+
+.six:hover {
+	background-color: #7ce3ac;
+}
+
+.multiplication:hover {
+	background-color: #7ce3cf;
+}
+
+.one:hover {
+	background-color: #7cc4e3;
+}
+
+.two:hover {
+	background-color: #7ca9e3;
+}
+
+.three:hover {
+	background-color: #7c8ae3;
+}
+
+.minus:hover {
+	background-color: #987ce3;
+}
+
+.zero:hover {
+	background-color: #c47ce3;
+}
+
+.decimal:hover {
+	background-color: #e37ce0;
+}
+
+.equals:hover {
+	background-color: #e37cba;
+}
+
+.plus:hover {
+	background-color: #e37c7c;
+}
+
+.rectangle {
+	background-color: lightgray;
+	border: 3px solid white;
+
+	width: 300px;
+	height: 100px;
+}
+
+button:focus {
+	outline: none;
+}
