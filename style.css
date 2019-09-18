@@ -15,12 +15,14 @@
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-around;
-	max-width: 400px;
-	height: 500px;
+	max-width: 410px;
+	height: 510px;
+	border-radius: 5%;
+	border: 5px solid rgb(143 209 199);
 }
 
 .square {
-	background-color: #d4d3d3;
+	background-color: white;
 	font-family: 'century gothic', sans-serif;
 	font-size: 2rem;
 	border: none;
@@ -32,7 +34,15 @@
 }
 
 .operator {
-	background-color: white;
+	background-color: #e8e6e6;
+}
+
+.clear {
+	background-color: #e8e6e6;
+}
+
+.equalSign {
+	background-color: #e8e6e6;
 }
 
 .square:hover {
@@ -59,19 +69,19 @@
 	background-color: #c1e37c;
 }
 
-.four:hover {
+.multiplication:hover {
 	background-color: #98e37c;
 }
 
-.five:hover {
+.six:hover {
 	background-color: #7ce387;
 }
 
-.six:hover {
+.five:hover {
 	background-color: #7ce3ac;
 }
 
-.multiplication:hover {
+.four:hover {
 	background-color: #7ce3cf;
 }
 
@@ -91,28 +101,34 @@
 	background-color: #987ce3;
 }
 
-.zero:hover {
+.plus:hover {
 	background-color: #c47ce3;
 }
 
-.decimal:hover {
+.equals:hover {
 	background-color: #e37ce0;
 }
 
-.equals:hover {
+.decimal:hover {
 	background-color: #e37cba;
 }
 
-.plus:hover {
+.zero:hover {
 	background-color: #e37c7c;
 }
 
 .rectangle {
-	background-color: lightgray;
-	border: 3px solid white;
+	background-color: #e8e6e6;
+	/* border: 3px solid white; */
 
-	width: 300px;
-	height: 100px;
+	width: 285px;
+	height: 90px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	border-radius: 45%;
+	text-align: center;
+	font-size: 2rem;
 }
 
 button:focus {
