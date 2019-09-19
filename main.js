@@ -1,29 +1,22 @@
-// window.onload = function() {
 const screen = document.querySelector('.screen');
 let math = '';
-// const operators = document.querySelectorAll('.operator');
-console.log(document);
-const numbersEtc = document.querySelectorAll('.forMath');
+// console.log(document);
+const numbersAndOperators = document.querySelectorAll('.forMath');
 const clear = document.querySelector('.clear');
 const evaluate = document.querySelector('.equalSign');
-console.log(numbersEtc);
+// console.log(numbersAndOperators);
 
-for (let symbol of numbersEtc) {
+for (let symbol of numbersAndOperators) {
 	symbol.addEventListener('click', function() {
 		screen.innerText += symbol.innerText;
 		math += symbol.innerText;
-		// console.log(num.innerText);
-		console.log('symbol');
 	});
 }
 
-// for (let op of operators) {
-// 	op.addEventListener('click', function() {
-// 		screen.innerText = op.innerText;
-
-// 		// console.log('click');
-// 	});
-// }
+document.addEventListener('keypress', function() {
+	screen.innerText += event.key;
+	math += screen.innerText;
+});
 
 clear.addEventListener('click', function() {
 	screen.textContent = '';
@@ -31,8 +24,28 @@ clear.addEventListener('click', function() {
 });
 
 evaluate.addEventListener('click', function() {
-	// eval(screen.textContent);
-	let answer = eval(math);
-	screen.textContent = answer;
+	try {
+		let answer = eval(math);
+		screen.textContent = answer;
+		math = answer;
+	} catch (err) {
+		if (err instanceof SyntaxError) {
+			screen.textContent = 'Oops!';
+			math = '';
+		}
+	}
 });
-// };
+
+document.addEventListener('keydown', function() {
+	if (event.keyCode == 8) {
+		math = math.substr(0, math.length - 1);
+		screen.innerText = math;
+	}
+});
+
+// document.addEventListener('keyup', function() {
+// 	if (event.keycode === 13) {
+// 		answer = eval(math);
+// 		screen.innerText = answer;
+// 	}
+// });

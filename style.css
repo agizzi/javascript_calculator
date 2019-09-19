@@ -129,6 +129,7 @@
 	border-radius: 45%;
 	text-align: center;
 	font-size: 2rem;
+	overflow: hidden;
 }
 
 button:focus {
