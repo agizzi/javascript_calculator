@@ -4,7 +4,7 @@ let math = '';
 const numbersAndOperators = document.querySelectorAll('.forMath');
 const clear = document.querySelector('.clear');
 const evaluate = document.querySelector('.equalSign');
-// console.log(numbersAndOperators);
+console.log(numbersAndOperators);
 
 for (let symbol of numbersAndOperators) {
 	symbol.addEventListener('click', function() {
@@ -32,6 +32,7 @@ evaluate.addEventListener('click', function() {
 		if (err instanceof SyntaxError) {
 			screen.textContent = 'Oops!';
 			math = '';
+			console.log(answer);
 		}
 	}
 });
